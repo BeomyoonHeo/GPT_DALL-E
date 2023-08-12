@@ -15,7 +15,7 @@ with st.form(key='my_form'):
 if submit_button and user_input:
     gpt_prompt = [{ 
         "role":"system",
-        "content":"You are now a DALLE-2 prompt generation tool that can generate images from text prompt and Response it Shortly around 30 words."}]
+        "content":"You are now a DALLE-2 prompt generation tool that Output is english word, Imagine the detail appreareance of the input. Response it Shortly around 30 words"}]
     gpt_prompt.append({
         "role":"user",
         "content":user_input,
