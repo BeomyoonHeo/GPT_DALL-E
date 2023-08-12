@@ -9,14 +9,13 @@ st.title('chatGPT + DALL E')
 with st.form(key='my_form'):
 
     user_input = st.text_input('Prompt')
-    size = st.selectbox('Size'['256x256', '512x512', '1024x1024'])
+    size = st.selectbox('Size', ['256x256', '512x512', '1024x1024'])
     submit_button = st.form_submit_button(label='Submit')
 
 if submit_button and user_input:
     gpt_prompt = [{ 
         "role":"system",
-        "content":"Imagine the Detail and appearance of the input. Response it Shortly around 20 words."
-    }]
+        "content":"You are now a DALLE-2 prompt generation tool that can generate images from text prompt and Response it Shortly around 30 words."}]
     gpt_prompt.append({
         "role":"user",
         "content":user_input,
